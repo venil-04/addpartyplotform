@@ -46,7 +46,7 @@ const AddPartyPlotForm = () => {
     // Handle form submission (e.g., send data to backend)
     console.log(formData);
     try {
-        const response = await axios.post('http://localhost:5000/api/v1/pp/create', formData);
+        const response = await axios.post('https://pp-backend-cgpq.onrender.com/api/v1/pp/create', formData);
         console.log('Response:', response.data);
         // Clear form data after successful submission
         setFormData({
@@ -60,7 +60,7 @@ const AddPartyPlotForm = () => {
           price: '',
           description: '',
           contact: '',
-          images: [],
+          photos: [],
         });
       } catch (error) {
         console.error('Error submitting form:', error);
